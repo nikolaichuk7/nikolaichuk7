@@ -1,47 +1,25 @@
 # Serhii Nikolaichuk
 
-**AI-Native Product Architect · Technical Founder · Inventor**
-Austin, Texas
+Remote attestation and confidential computing · standards and working code · Austin, Texas
 
-I design and ship production software by directing AI coding agents. I own the architecture,
-the data model, the integration contracts and the infrastructure; agents write the implementation.
+I work on what a signed artifact from a machine actually proves, and on how a relying party should read it. I write the specifications and the code that checks them.
 
----
+## Standards (IETF)
 
-### Shipped
+- Co-author of **[draft-richardson-rats-geographic-results](https://datatracker.ietf.org/doc/draft-richardson-rats-geographic-results/)**, the geographic attestation results draft in the RATS working group. Author of the `basis` proposal: a location claim states which class of artifact it rests on, measured by the attester, asserted by the operator, or concluded by another verifier ([PRs #6, #7, #9](https://github.com/mcr/geographicresult/pulls)).
+- **[draft-nikolaichuk-rats-tap](https://datatracker.ietf.org/doc/draft-nikolaichuk-rats-tap/)**, Trusted Artifact Provenance: attestation-gated release of sealed key material, recorded as an auditable object.
+- **[draft-nikolaichuk-scitt-continuity-receipts](https://datatracker.ietf.org/doc/draft-nikolaichuk-scitt-continuity-receipts/)**, registering the recovery of a stateful asset as a signed statement in a transparency service.
 
-**[GlossPlate](https://glossplate.com)** — production SaaS on web, iOS and Android.
-Two live POS integrations: Square (OAuth2, catalog sync, merchant tax-rate sync, order push,
-under a merchant-of-record model within SAQ-A compliance scope) and Clover (hosted checkout
-with webhook-driven payment reconciliation). Its generative image pipeline runs an automated
-LLM-as-judge evaluation loop — every output scored across four dimensions against fixed
-thresholds, with adaptive-prompt retries before anything reaches publish.
+## Working code
 
-**Entropy Protocol** — five-layer authentication for AI-generated text: hash-chained
-watermarking via logit masking, an encrypted deterministic verification log, language-adaptive
-embedding intervals, SBERT stylometric model fingerprinting, and sentence-level mixed-authorship
-attribution. Built against EU AI Act Article 50.
+- **[geoar-verifier](https://github.com/nikolaichuk7/geoar-verifier)**, a verifier for geographic attestation results and a measured atlas of where a place enters an attestation artifact: AWS Nitro and SEV-SNP with VLEK, Google Cloud SEV-SNP and Intel TDX, Azure SEV-SNP through the paravisor. Every signature checked against the vendor root with independent code, every capture tied to a public nonce. Start with [ATLAS.md](https://github.com/nikolaichuk7/geoar-verifier/blob/main/ATLAS.md).
+- **[aiburnclock.org](https://aiburnclock.org)**, a daily index of what AI agents waste by reading whole files they never use, priced against published budgets: public sources, open formula, a dated release for every state. Source in [aiburnclock](https://github.com/nikolaichuk7/aiburnclock).
+- **[xerj-offline](https://github.com/nikolaichuk7/xerj-offline)**, **[xerj-plugins](https://github.com/nikolaichuk7/xerj-plugins)**, **[arp-9200](https://github.com/nikolaichuk7/arp-9200)**: retrieval for AI agents over the Elasticsearch API on port 9200 (XERJ): an assistant that works offline, Claude Code plugins, protocol notes.
 
-**[ShelvesLab](https://shelveslab.com)** — privacy-preserving edge sensing. ESP32-S3 firmware on
-ESP-IDF with TensorFlow Lite Micro, on-device inference with k-threshold privacy gating,
-MQTT-over-TLS to tenant-isolated storage.
+## Products and IP
 
----
+Founder of [The Capital Index](https://thecapitalindex.com), a small studio in Austin. Shipped **[GlossPlate](https://glossplate.com)** (web, iOS and Android; Square and Clover POS integrations), **Entropy Protocol** (five-layer provenance for AI-generated text, built against EU AI Act Article 50) and **[ShelvesLab](https://shelveslab.com)** (privacy-preserving edge sensing on ESP32-S3). Named inventor on eight USPTO patent applications, sole inventor on four; I draft and prosecute the filings myself.
 
-### Intellectual property
+Product code lives in private repositories, as these are operating companies with pending patents. The attestation work above is public and reproducible.
 
-Named inventor on eight USPTO patent applications, sole inventor on four. I draft and prosecute
-filings personally — including a preliminary amendment, a prior-art rebuttal, and a petition for
-examiner review, filed without outside counsel.
-
----
-
-### On the empty repository list
-
-The work above lives in private repositories. These are operating companies with pending patent
-applications, not open-source projects. I am glad to walk through the architecture of any of
-them in detail.
-
----
-
-**[thecapitalindex.com](https://thecapitalindex.com)** · **[LinkedIn](https://www.linkedin.com/in/serhii-nikolaichuk-9959b2193/)**
+[IETF datatracker](https://datatracker.ietf.org/person/nikolaichuk.s.f@gmail.com) · [thecapitalindex.com](https://thecapitalindex.com) · [LinkedIn](https://www.linkedin.com/in/serhii-nikolaichuk-9959b2193/)
