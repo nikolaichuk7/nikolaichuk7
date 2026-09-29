@@ -6,16 +6,16 @@ I work on what a signed statement from a machine actually proves — and what it
 
 ## Selected work
 
-**[Vault Genome](https://github.com/vault-genome/vaultgenome-core)** · Go · AGPL-3.0
+**[Vault Genome](https://github.com/vault-genome/vaultgenome-core)** · Go · AGPL-3.0<br>
 Open-source continuity for fine-tuned AI models: the model is sealed as a compact genome, its key is released only to hardware that attests, and the restored model is gated EXACT or EQUIVALENT against its own sealed references. Measured on real chips: a failover from a Google Cloud SEV-SNP host to an Azure confidential H100 in 24.99 s; a 32B model restored and gated EXACT on the H100; byte-identical integer inference on an Intel Xeon and an NVIDIA L4; seven of eight adversarial policies refused on the record. Every number is one of [26 verifiable claims](https://github.com/vault-genome/vaultgenome-core/blob/main/VERIFIABLE-CLAIMS.md), each with its evidence files and the command that reproduces it. Releases are signed and reproducible, with SLSA provenance.
 
-**[HATLS](https://github.com/nikolaichuk7/hatls)** · Python · Apache-2.0
+**[HATLS](https://github.com/nikolaichuk7/hatls)** · Python · Apache-2.0<br>
 Hybrid attested TLS with a continuity mandate: proof that the confidential machine answering you is the same enrolled instance it was at the first message, and detection within one message when it stops being. Measured on AMD SEV-SNP: 2.5 µs per link, about 1 ms per mandate check; no false reject, no accepted impersonation and no accepted relayed exporter in 500 trials each. [Hardware results](https://github.com/nikolaichuk7/hatls/blob/main/docs/HARDWARE-RESULTS.md).
 
-**[geoar-verifier](https://github.com/nikolaichuk7/geoar-verifier)**
+**[geoar-verifier](https://github.com/nikolaichuk7/geoar-verifier)** · Shell, Python<br>
 A verifier for geographic attestation results and a measured atlas of where a place enters an attestation artifact: AWS Nitro and SEV-SNP with VLEK, Google Cloud SEV-SNP and Intel TDX, Azure SEV-SNP through the paravisor. Every signature checked against the vendor root with independent code, every capture tied to a public nonce. Start with [ATLAS.md](https://github.com/nikolaichuk7/geoar-verifier/blob/main/ATLAS.md).
 
-**[tacra-est](https://github.com/nikolaichuk7/tacra-est)**
+**[tacra-est](https://github.com/nikolaichuk7/tacra-est)** · Python, ProVerif<br>
 Reference implementation, twenty-four ProVerif models and SEV-SNP measurements for the EST profile of TACRA (`draft-novak-lamps-tacra-est`): the attacks the first text admits, and the bindings that close them.
 
 ## Standards (IETF)
